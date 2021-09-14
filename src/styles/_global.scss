@@ -1,0 +1,82 @@
+@use "variables";
+
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+    background: variables.$bg;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: auto 800px;
+    max-width: 1200px;
+    margin: 0.5rem auto 0;
+}
+
+.scoreboard {
+    background: #2c2c2c;
+}
+
+.game-window {
+    position: relative;
+    background-color: #1a1a1a;
+}
+
+.scores {
+    padding: 0;
+    list-style-type: none;
+}
+
+h2 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.scores li {
+    padding: 1rem;
+    text-align: right;
+    padding-right: 1.5rem;
+    border-radius: 0.5rem;
+    margin: 0.5rem 0.4rem;
+    background: #4d4d4d;
+    color: white;
+}
+
+.scores li:nth-child(1) .points-text span {
+    color: #997932;
+}
+
+.scores li:nth-child(1) {
+    background: wheat;
+    color: #3d3d3d ;
+}
+
+.points-text {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.points-text span {
+    color: #c2a35e;
+}
+
+.apple {
+    width: var(--size);
+    height: var(--size);
+    background-color: red;
+    position: absolute;
+    border: 1px solid #1a1a1a;
+    box-sizing: border-box;
+}
+
+.snake {
+    border: 1px solid #1a1a1a;
+    box-sizing: border-box;
+    width: var(--size);
+    height: var(--size);
+    background-color: lawngreen;
+    position: absolute;
+}
