@@ -1,15 +1,18 @@
+import "./styles/index.scss";
+
 window.addEventListener('load', () => {
     const gameWindow = document.getElementsByClassName('game-window')[0];
 
-    const windowWidth = 800;
-    const windowHeight = 800;
-    const sizeOfEntities = 10;
-    const appleSpawnRate = 25;
-    const updateFrequence = 100;
+    const windowWidth = 800,
+    windowHeight = 800,
+    sizeOfEntities = 10,
+    appleSpawnRate = 25,
+    updateFrequence = 100;
+
     gameWindow.style.height = windowHeight + 'px';
     gameWindow.style.width = windowWidth + 'px';
 
-    let pixels = {}
+    let pixels = {};
     Array((windowWidth / sizeOfEntities) * (windowHeight / sizeOfEntities)).fill(0).forEach((e, i) => pixels[i] = i);
 
     const apples = [];
@@ -175,7 +178,6 @@ window.addEventListener('load', () => {
         if (time % appleSpawnRate === 0) spawnApple();
         time++;
     }
-
 
     let gameLoop = setInterval(gameLogic , updateFrequence);
 })
